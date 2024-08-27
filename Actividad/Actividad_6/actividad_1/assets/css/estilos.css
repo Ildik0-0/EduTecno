@@ -1,0 +1,75 @@
+#colorRojo{
+    color: red; 
+    font-size: 20px;
+}
+.colorAmarillo{
+    background-color: yellow; 
+    text-align: center;
+}
+.colorCeleste{
+    text-decoration: underline; 
+    background-color: lightblue;
+}
+.colorGris{
+    background-color: gray; 
+    color: white;
+}
+.colorVerde{
+    color: green; 
+    background-color: yellow";
+}
+.colorRojo{
+    color: red; 
+    background-color: pink;
+}
+.colorNaranjo{
+    color: orange; 
+    background-color: gray";
+}
+.colorNegro{
+    color: white; 
+    background-color: black
+}
+
+
+.caja{
+    box-shadow: 4px 2px rgb(255, 5, 5);
+}
+
+span{
+    font-weight:900;
+    line-height: 1.5;
+}
+
+
+.selector{
+    display: flex;
+    justify-content: center;
+}
+    
+
+.selector{ 
+    display: flex;
+    align-items: flex-start;
+}
+
+
+.selector	{
+    display: flex;
+    align-content: space-between;
+}
+    
+    
+/* Este es un comentarios */
+
+.selector{ display: flex; 
+    flex-grow: 2;
+    flex-shrink: 1;
+    flex-basis: 200px;
+}
+    
+
+.selector{ 
+    display: flex;
+    order: 2;
+}

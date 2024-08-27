@@ -1,0 +1,33 @@
+html, body {
+    margin: 0;
+}
+
+.elem {
+    width: 200px;
+    height: 200px;    
+}
+
+.square1 {
+    background: rgba(255, 0, 0, 0.5);
+    position: absolute;
+    z-index: 1; /* Más bajo, por debajo de los otros */
+}
+
+.square2 {
+    background: rgba(0, 255, 0, 0.5);
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    z-index: 3; /* Más alto, por encima de otros elementos */
+}
+
+.square3 {
+    background: rgba(0, 0, 255, 0.5);
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    z-index: 2; /* Intermedio, entre los otros dos elementos */
+}
+    
+    
+

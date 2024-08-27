@@ -1,0 +1,30 @@
+main{
+    border: 2px yellow solid;
+    border-radius:black; 
+    padding: 2%; display: flex;
+};
+body{
+    background-color: antiquewhite;
+};
+header{
+    border: 2px red solid; 
+    border-radius:black; 
+    padding: 2%;}
+
+nav{
+    border: 1px blue solid; 
+    border-radius: black;
+    padding: 2%;
+}
+section{
+    border: 2px green solid; 
+    border-radius:black;
+    padding: 2%
+}
+
+h1{
+    font-style: italic
+}
+h2{
+    font-family: fantasy
+}

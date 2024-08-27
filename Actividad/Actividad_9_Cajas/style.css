@@ -1,0 +1,44 @@
+.cajaInline{
+    display: inline;
+    border: solid 1px ;
+
+}
+
+.cajaBlock{
+    display: block;
+    border: solid 1px ;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    margin: 5px; 
+}
+
+.cajaInlineBlock{
+    display: inline-block;
+    border:solid 1px;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    margin: 5px; 
+}
+
+.flex{
+    display: flex;
+}
+.cajaFlex{
+    border: solid 1px;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.grip{
+    display: grid;
+}
+
+.cajaGrip{
+    border: solid 1px;
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+}

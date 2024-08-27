@@ -1,0 +1,75 @@
+* {
+    font-family: sans-serif;
+}
+
+h1 {
+    font-weight: normal;
+    background-color: #b3b3b3;
+    border: 1px solid black;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+}
+
+.colorPlomo {
+    background-color: #cccccc;
+    border: 1px solid black;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.colorAmarillo {
+    background-color: #ffff9a;
+    border: 1px solid black;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+span {
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 480px) {
+    .mover {
+        width: 100%;
+    }
+    .pantalla1 {
+        display: none;
+    }
+    .pantalla2 {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 481px) {
+    .mover {
+        width: 100%;
+    }
+    .pantalla1 {
+        display: none;
+    }
+    .pantalla3 {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .mover {
+        width: 100%;
+    }
+    .pantalla1 {
+        display: block;
+    }
+    .pantalla2 {
+        display: none;
+    }
+    .pantalla3 {
+        display: none;
+    }
+}

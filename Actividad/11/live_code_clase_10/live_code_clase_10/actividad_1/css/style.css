@@ -1,0 +1,54 @@
+
+.mover{
+    width: 100%;
+    background-color: burlywood;
+}
+.colorPlomo{
+    border: solid;
+    margin: 10px;
+    background-color: gray;
+}
+.colorAmarillo_ocultar{
+    border: solid;
+    margin: 10px;
+}
+.pantalla1{
+    
+    border: solid;
+    margin: 10px;
+    
+}
+.pantalla2{
+    
+    border: solid;
+    margin: 10px;
+}
+.pantalla3{
+   
+    border: solid;
+    margin: 10px;
+}
+
+@media (max-width: 480px){
+  
+   .pantalla1{
+    display: none;
+    }
+    .pantalla2{
+        display: none;
+    }
+}
+@media (max-width: 1023px) and (min-width:481px){
+    .pantalla1{
+        display: none;
+    }
+    .pantalla3{
+        display: none;
+    }
+}
+
+@media (min-width:1024px) {
+    .pantalla2, .pantalla3{
+        display: none;
+    }
+}
