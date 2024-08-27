@@ -1,0 +1,13 @@
+.navbar{
+    background-color: #8260c2;
+}
+
+.navbar-brand, .nav-link{
+    color: white;
+}
+
+table{
+    margin: auto;
+    margin-top: 0.1%;
+    width: 80%;
+}
