@@ -1,0 +1,83 @@
+/* Reseteo de márgenes y paddings para una apariencia consistente */
+body, html {
+    margin: 0;
+    padding: 0; 
+}
+
+/* Estilo de la caja inline*/
+.caja1 {
+    display: inline;
+    background-color: yellow;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    margin: 10px 10px 10px;
+    padding: 5px;
+   
+}
+
+/* Estilo de la caja block */
+.caja2 {
+    display:block;
+    background-color: rgb(30, 255, 0);
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    margin: 10px 10px 10px;
+    padding: 5px;    
+}
+
+/* Estilo de la caja inline-block */
+.caja3 {
+    display:inline-block;
+    background-color: rgb(35, 229, 255);
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    margin: 10px 10px 10px;
+    padding: 5px;   
+}
+
+/* Estilo de la caja none */
+.caja4 {
+    display:none;
+    background-color: rgb(30, 255, 0);
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    margin: 10px 10px 10px;
+    padding: 5px;
+    
+}
+
+/* Estilo de la caja flex */
+#contenedor-flex {
+    display: flex;
+    }
+.caja5 {
+    background-color: rgb(255, 186, 75);
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    margin: 10px 10px 10px;
+    padding: 5px;
+
+}
+
+/* Estilo de la caja grid */
+#contenedor-grid {
+    display: grid;
+    }
+.caja6 {
+    background-color: rgb(122, 13, 169);
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    margin: 10px 10px 10px;
+    padding: 5px;
+
+}
+
+p{
+    padding: 10px 10px 10px 10px;
+}

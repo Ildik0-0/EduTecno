@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneSmartLamp - La lámpara del futuro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #6c065e;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .main-container {
+            width: 100%;
+            margin: 0px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .product-info {
+            text-align: center;
+            padding: 20px;
+        }
+        .product-info h1 {
+            color: #6c065e;
+            margin: 0 0 10px;
+        }
+        .product-info p {
+            font-size: 1.1em;
+            margin: 0 0 20px;
+        }
+        .features-table {
+            margin-top: 20px;
+        }
+        .features-table td {
+            padding: 10px;
+            vertical-align: top;
+        }
+        .features-table .product-image {
+            width: 50%;
+        }
+        .features-table .product-info {
+            width: 50%;
+        }
+        .features-table ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .features-table li {
+            background: #e2e2e2;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .features-table span {
+            font-weight: bold;
+        }
+        .saber-mas {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .saber-mas form {
+            display: inline-block;
+            text-align: left;
+        }
+        .saber-mas input[type="email"] {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 250px;
+            margin-right: 10px;
+        }
+        .saber-mas input[type="submit"] {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #6c065e;
+            color: white;
+            cursor: pointer;
+        }
+        .saber-mas input[type="submit"]:hover {
+            background-color: #6c065e;
+        }
+        footer {
+            background-color: #6c065e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+        }
+        footer h2 {
+            margin: 0 0 10px;
+        }
+        footer p {
+            margin: 0;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .social-links {
+            margin: 10px 0;
+        }
+        .social-links a {
+            margin: 0 10px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>OneSmartLamp</h1>
+        <p>La lámpara del futuro para un hogar inteligente</p>
+    </header>
+    <div class="main-container">
+        <!-- Descripción del Producto -->
+        <div class="product-info">
+            <p>Con OneSmartLamp, transforma tu espacio con iluminación avanzada que se adapta a tus necesidades diarias y mejora tu comodidad en casa.</p>
+        </div>
+
+        <!-- Tabla con Características e Imagen -->
+        <table class="features-table">
+            <tr>
+                <!-- Imagen del Producto -->
+                <td class="product-image">
+                    <img src="OneSmartLamp.jpg" alt="OneSmartLamp">
+                </td>
+                <!-- Información del Producto -->
+                <td class="product-info">
+                    <h2>Características:</h2>
+                    <ul>
+                        <li><span>Control Inteligente:</span> Ajusta la intensidad y el color de la luz desde tu smartphone o por comando de voz.</li>
+                        <li><span>Programación Avanzada:</span> Configura horarios personalizados para encender o apagar la lámpara automáticamente.</li>
+                        <li><span>Eficiencia Energética:</span> Benefíciate de una iluminación brillante y ecológica con bajo consumo de energía.</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Llamada a la Acción -->
+        <div class="saber-mas">
+            <h3>¿Quieres saber más?</h3>
+            <p>Regístrate en nuestra lista de correo para recibir actualizaciones, ofertas especiales y más información sobre OneSmartLamp.</p>
+            <form action="#" method="post">
+                <input type="email" name="email" placeholder="Tu correo electrónico" required>
+                <input type="submit" value="¡Suscríbete!">
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <h4>OneSmartLamp</h4>
+        <p>&copy; 2024 OneSmartLamp. Todos los derechos reservados.</p>
+        <div class="social-links">
+            <a href="#" target="_blank">Facebook</a>
+            <a href="#" target="_blank">Twitter</a>
+            <a href="#" target="_blank">Instagram</a>
+        </div>
+        <p><a href="#">Política de Privacidad</a> | <a href="#">Términos de Servicio</a></p>
+    </footer>
+</body>
+</html>

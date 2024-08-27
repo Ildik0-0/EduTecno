@@ -1,0 +1,46 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: burlywood;
+}
+
+.inline{ 
+    border: solid 1px;
+    background-color: red;
+    width: 100%; 
+    height: 100px;
+}
+
+.caja2{
+    display: block;
+    border: solid 1px;
+    height: 100vh;
+    width: 20vw;
+    background-color: purple;  
+}
+
+.caja2, #cajaBlue{
+   float: left;
+    
+}
+#cajaBlue{
+    display: block;
+    background-color: rgb(0, 128, 255);
+    width: 75%;
+    margin: 5px;
+}
+
+.caja3{
+    display: inline-block;
+    border: solid 1px;
+    height: 100px;
+    width: 120px;
+    margin: 8px;
+}
+.caja4{
+    border: solid 1px;
+    background-color: palevioletred;
+    width: 100%;
+    height: 90px;
+    margin: 5px;
+}
