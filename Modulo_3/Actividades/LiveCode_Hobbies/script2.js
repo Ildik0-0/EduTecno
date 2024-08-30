@@ -1,7 +1,7 @@
 let nameUser = "";
 let resultDiv = document.getElementById('showResult');
 
-document.getElementById('searchHobby').addEventListener('click', function (event) {
+document.getElementById('searchHobby').addEventListener('submit', function (event) {
     event.preventDefault();
 
     let result = "";
