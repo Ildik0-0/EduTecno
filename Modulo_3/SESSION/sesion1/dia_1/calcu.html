@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Cuadrada</title>
+    <style>
+        /* Estilo para el contenedor de la calculadora */
+        .calculator {
+            width: 200px; /* Ancho fijo para la calculadora */
+            margin: 50px auto; /* Centra la calculadora horizontalmente */
+            padding: 10px; /* Espacio interno */
+            border: 1px solid #ccc; /* Borde gris claro */
+            border-radius: 5px; /* Bordes redondeados */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+        }
+        /* Estilo para la pantalla de la calculadora */
+        .display {
+            width: 100%; /* Ocupa todo el ancho del contenedor */
+            height: 40px; /* Altura fija */
+            margin-bottom: 10px; /* Espacio debajo de la pantalla */
+            font-size: 1.5em; /* Tamaño de fuente grande */
+            text-align: right; /* Texto alineado a la derecha */
+            padding: 5px; /* Espacio interno */
+            box-sizing: border-box; /* Incluye el padding y borde en el ancho y alto */
+        }
+        /* Estilo para el contenedor de los botones */
+        .button-container {
+            display: grid; /* Usa CSS Grid para organizar los botones */
+            grid-template-columns: repeat(4, 1fr); /* Cuatro columnas de igual tamaño */
+            gap: 5px; /* Espacio entre los botones */
+        }
+        /* Estilo para los botones */
+        button {
+            width: 100%; /* Ocupa todo el ancho de su celda en la cuadrícula */
+            height: 40px; /* Altura fija */
+            font-size: 1.2em; /* Tamaño de fuente grande */
+            border: 1px solid #ccc; /* Borde gris claro */
+            background-color: #f8f9fa; /* Color de fondo claro */
+            cursor: pointer; /* Cambia el cursor al pasar por encima */
+            transition: background-color 0.3s; /* Transición suave para el color de fondo */
+        }
+        /* Estilo para los botones de operación */
+        button.operator {
+            background-color: #007bff; /* Color de fondo azul para los botones de operación */
+            color: white; /* Color del texto en blanco */
+        }
+        button.operator:hover {
+            background-color: #0056b3; /* Color de fondo más oscuro al pasar el mouse */
+        }
+        button:active {
+            background-color: #e9ecef; /* Color de fondo al hacer clic */
+        }
+    </style>
+</head>
+<body>
+    <!-- Contenedor principal de la calculadora -->
+    <div class="calculator">
+        <!-- Campo de entrada para mostrar el resultado -->
+        <input type="text" id="display" class="display" disabled>
+        <!-- Contenedor para los botones -->
+        <div class="button-container">
+            <!-- Botón para limpiar la pantalla -->
+            <button onclick="clearDisplay()">C</button>
+            <!-- Botones para operaciones básicas -->
+            <button onclick="appendNumber('/')">/</button>
+            <button onclick="appendNumber('*')">*</button>
+            <button onclick="appendNumber('-')">-</button>
+            <button onclick="appendNumber('+')">+</button>
+            <button onclick="appendNumber('7')">7</button>
+            <button onclick="appendNumber('8')">8</button>
+            <button onclick="appendNumber('9')">9</button>
+            <button rowspan="2" class="operator" onclick="calculateResult()">=</button>
+            <button onclick="appendNumber('4')">4</button>
+            <button onclick="appendNumber('5')">5</button>
+            <button onclick="appendNumber('6')">6</button>
+            <button onclick="appendNumber('1')">1</button>
+            <button onclick="appendNumber('2')">2</button>
+            <button onclick="appendNumber('3')">3</button>
+            <!-- Botón para el número 0, que ocupa dos columnas -->
+            <button onclick="appendNumber('0')" colspan="2">0</button>
+        </div>
+    </div>
+
+    <script>
+        // Variables para almacenar los valores actuales y previos y la operación
+        let currentInput = '';
+        let previousInput = '';
+        let operation = null;
+
+        // Función para agregar números a la entrada actual
+        function appendNumber(number) {
+            currentInput += number; // Añade el número al valor actual
+            updateDisplay(); // Actualiza la pantalla
+        }
+
+        // Función para establecer la operación matemática
+        function setOperation(op) {
+            if (currentInput === '') return; // No hacer nada si no hay entrada actual
+            if (previousInput !== '') {
+                calculateResult(); // Calcula el resultado si ya hay una operación anterior
+            }
+            operation = op; // Establece la nueva operación
+            previousInput = currentInput; // Guarda el valor actual
+            currentInput = ''; // Limpia la entrada actual
+        }
+
+        // Función para calcular el resultado basado en la operación
+        function calculateResult() {
+            let result;
+            const prev = parseFloat(previousInput); // Convierte la entrada previa a número
+            const current = parseFloat(currentInput); // Convierte la entrada actual a número
+
+            if (isNaN(prev) || isNaN(current)) return; // No hacer nada si alguno no es un número
+
+            // Realiza la operación correspondiente
+            switch (operation) {
+                case '+':
+                    result = prev + current;
+                    break;
+                case '-':
+                    result = prev - current;
+                    break;
+                case '*':
+                    result = prev * current;
+                    break;
+                case '/':
+                    result = prev / current;
+                    break;
+                default:
+                    return;
+            }
+
+            currentInput = result.toString(); // Actualiza la entrada actual con el resultado
+            operation = null; // Resetea la operación
+            previousInput = ''; // Limpia la entrada previa
+            updateDisplay(); // Actualiza la pantalla
+        }
+
+        // Función para limpiar la pantalla
+        function clearDisplay() {
+            currentInput = ''; // Limpia la entrada actual
+            previousInput = ''; // Limpia la entrada previa
+            operation = null; // Resetea la operación
+            updateDisplay(); // Actualiza la pantalla
+        }
+
+        // Función para actualizar el campo de entrada con el valor actual
+        function updateDisplay() {
+            document.getElementById('display').value = currentInput;
+        }
+    </script>
+</body>
+</html>

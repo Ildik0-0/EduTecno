@@ -14,7 +14,7 @@ function agregarHobby() {
   }
 }
 
-// Función para buscar un hobby en la lista (implementarás esta función)
+// Función para buscar un hobby en la lista 
 function buscarHobby() {
     const hobbyABuscar = inputBuscar.value.toLowerCase(); // Convertimos a minúsculas para una comparación más robusta
     const listaHobbiesArray = Array.from(listaHobbies.children); // Convertimos la lista de elementos li en un array

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Imagen en Modal con Bootstrap</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Botón para abrir el modal con una imagen -->
+    <button type="button" class="btn btn-primary" onclick="showImage('artropodos')">
+        Ver Imagen 1
+    </button>
+
+    <!-- El Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Imagen del Modal</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalImage" src="" class="img-fluid" alt="Imagen del Modal">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    
+    <script >
+        // script.js
+function showImage(imageName) {
+    // Construir la ruta de la imagen usando una plantilla literal
+    const imagePath = `images/${imageName}.jpg`;
+
+    // Actualizar el src de la imagen en el modal
+    document.getElementById('modalImage').src = imagePath;
+
+    // Obtener una instancia del modal de Bootstrap
+    var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+
+    // Mostrar el modal
+    myModal.show();
+}
+
+    </script>
+</body>
+</html>

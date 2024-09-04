@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de do...while con switch</title>
+</head>
+<body>
+    <script>
+        let opcion;
+
+        do {
+            // Mostrar el menú y pedir al usuario que seleccione una opción
+            opcion = parseInt(prompt("Selecciona una opción:\n1. Saludar\n2. Mostrar la fecha actual\n3. Mostrar un mensaje\n4. Salir"));
+
+            // Utilizar switch para manejar la opción seleccionada
+            
+            switch (opcion) {
+                case 1:
+                    alert("¡Hola, usuario!");
+                    break;
+                case 2:
+                    alert("La fecha y hora actuales son: " + new Date().toString());
+                    break;
+                case 3:
+                    alert("Este es un mensaje de ejemplo.");
+                    break;
+                case 4:
+                    alert("¡Gracias por usar el programa!");
+                    break;
+                default:
+                    alert("Opción no válida. Por favor, selecciona una opción del 1 al 4.");
+                    break;
+            }
+        } while (opcion !== 4); // Continuar hasta que el usuario elija la opción 4 (Salir)
+
+    </script>
+</body>
+</html>

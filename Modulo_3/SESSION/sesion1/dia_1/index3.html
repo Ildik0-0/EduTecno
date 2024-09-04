@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobby</title>
+</head>
+<body>
+    <form action="#" id="formHobby">
+        <h1>Registro de Hobbies :)</h1>
+        <input type="text" id="hobby" placeholder="Ingrese Nombre" required>         
+        <button type="submit" id="searchHobby">Buscar</button>
+    </form>
+    <div id="showResult"></div>
+    <script>
+
+let nameUser = "";
+let resultDiv = document.getElementById("showResult");
+document.getElementById('formHobby').addEventListener('submit', function (event) {
+//document.getElementById('searchHobby').addEventListener('click', function (event) {
+//document.getElementById("searchHobby").addEventListener("submit", function (e) {
+    event.preventDefault();
+  
+  let result = "";
+  nameUser = document.getElementById("hobby").value;
+  
+  if (nameUser == "Iremar") {
+    result = "Natación";
+  } else if (nameUser == "Claudio") {
+    result = "Ciclismo";
+  } else if (nameUser == "Nicolas") {
+    result = "Jugar :)";
+  } else {
+    result = "No existe el registro :(";
+  }
+  resultDiv.innerHTML = result;   
+});
+    </script>
+   
+</body>
+</html>

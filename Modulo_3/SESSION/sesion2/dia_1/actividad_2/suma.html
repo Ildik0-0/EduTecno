@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumar Números</title>
+    <style>
+        button {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="ingresarNumero(7)">Ingresar Número 7</button>
+    <button onclick="ingresarNumero(2)">Ingresar Número 2</button>
+    <br>
+    <button onclick="sumar()">Sumar</button>
+    <p id="resultado">Resultado: </p>
+
+    <script>
+        // Variable global para almacenar los números ingresados
+        let numeros = [];
+
+        // Función para ingresar un número en el array
+        function ingresarNumero(numero) {
+            numeros.push(numero);
+            console.log(`Número ${numero} ingresado.`);
+        }
+
+        // Función para sumar los números ingresados
+        function sumar() {
+            const suma = numeros.reduce((acc, curr) => acc + curr, 0);
+            document.getElementById('resultado').innerText = `Resultado: ${suma}`;
+            // Limpiar el array después de mostrar el resultado (opcional)
+            numeros = [];
+        }
+    </script>
+</body>
+</html>

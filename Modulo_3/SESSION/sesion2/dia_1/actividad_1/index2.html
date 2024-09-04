@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo - Cajero Automatico</title>
+</head>
+<body>
+    <script>
+       // Datos de los usuarios
+       // Información para el primer usuario
+        let nombre1 = "elena";
+        let rut1    = "111-1";
+        let clave1  = 123;
+        let cuenta1 = 1000;
+
+        // Información para el segundo usuario
+        let nombre2 = "claudio";
+        let rut2    = "222-2";
+        let clave2  = 1234;
+        let cuenta2 = 2000;
+
+        // Información para el tercer usuario
+        let nombre3 = "maria";
+        let rut3    = "333-3";
+        let clave3  = 12345;
+        let cuenta3 = 5000;
+
+        // Mensaje de bienvenida y solicitud de identificador y clave
+        alert("Bienvenido a Banca en Línea");
+        let rut = prompt("Ingrese su identificador");
+        let clave = parseInt(prompt("Ingrese su clave"));
+       
+
+        // Variables para almacenar el estado del usuario válido y sus datos
+        let usuarioValido = false;
+        let nombreUsuario = "";
+        let cuentaUsuario = 0;
+
+        // Verificación del usuario
+        if (rut == rut1 && clave == clave1) {
+            usuarioValido = true;
+            nombreUsuario = nombre1;
+            cuentaUsuario = cuenta1;
+
+        } else if (rut == rut2 && clave == clave2) {
+            usuarioValido = true;
+            nombreUsuario = nombre2;
+            cuentaUsuario = cuenta2;
+
+        } else if (rut == rut3 && clave == clave3) {
+            usuarioValido = true;
+            nombreUsuario = nombre3;
+            cuentaUsuario = cuenta3;
+        } else {
+             alert("Ingrese sus datos correctamente");
+             rut = parseInt(prompt("Ingrese su identificador"));
+             clave = parseInt(prompt("Ingrese su clave"));
+        }
+
+        // Si el usuario es válido, mostrar un mensaje de bienvenida y llamar al menú
+        if (usuarioValido) {
+            alert("Bienvenido " + nombreUsuario);
+            menu();
+        } else {
+             // Si el usuario no es válido, mostrar un mensaje de error
+            alert("Usuario incorrecto");
+        }
+
+        // Función para mostrar el menú de opciones
+        function menu() {
+            let opcion;
+            // Mostrar el menú hasta que el usuario elija la opción 4 para salir
+            do {
+                opcion = parseInt(prompt("Seleccione qué desea hacer: \n 1.- Ver saldo \n 2.- Realizar giro \n 3.- Realizar depósito \n 4.- Salir"));
+
+                switch (opcion) {
+                    case 1:
+                        // Mostrar el saldo actual del usuario
+                        alert("Su saldo actual es: " + cuentaUsuario);
+                        break;
+
+                    case 2:
+                        // Solicitar el monto a girar      
+                        let giro = parseInt(prompt("Su saldo actual es $" +
+                        cuentaUsuario + "\n Ingrese el monto que desea girar"));
+
+                        // Verificar si el monto es válido y si hay suficiente saldo
+                        if (isNaN(giro) || giro <= 0) {
+                            alert("Monto inválido");
+                        } else if (giro > cuentaUsuario) {
+                            alert("No se puede realizar la operación solicitada. Excede el saldo");
+                        } else {
+                            // Realizar el giro y actualizar el saldo
+                            //cuentaUsuario -= giro;
+                            cuentaUsuario= cuentaUsuario - giro;
+                            alert("Giro realizado. Su nuevo saldo es " + cuentaUsuario);
+                        }
+                        break;
+
+                    case 3:
+                        // Solicitar el monto a depositar
+                        let deposito = parseInt(prompt("Su saldo actual es $" +
+                        cuentaUsuario + "\n Ingrese el monto que desea depositar"));
+
+                        // Verificar si el monto es válido
+                        if (isNaN(deposito) || deposito <= 0) {
+                            alert("Monto inválido");
+                        } else {
+                            // Realizar el depósito y actualizar el saldo
+                            //cuentaUsuario += deposito;
+                            cuentaUsuario = cuentaUsuario + deposito;
+                            alert("Depósito realizado. Su nuevo saldo es " + cuentaUsuario);
+                        }
+                        break;
+
+                    case 4:
+                        // Mensaje de despedida al salir
+                        alert("Gracias por preferirnos");
+                        break;
+
+                    default:
+                         // Mensaje para selección inválida
+                        alert("Selección errónea");
+                        break;
+                }
+
+            } while (opcion !== 4);
+            // Continuar mostrando el menú hasta que el usuario elija salir
+        }
+
+
+
+        
+    </script>
+</body>
+</html>
