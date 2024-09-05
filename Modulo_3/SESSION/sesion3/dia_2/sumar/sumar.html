@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumar Números</title>
+     <style>
+       /* Estilo para los botones */
+       button {
+            margin: 5px; /* Espacio alrededor del botón */
+            padding: 10px; /* Espacio interno dentro del botón */
+            font-size: 16px; /* Tamaño de la fuente en el botón */
+        }
+        /* Estilo para el área de visualización del resultado */
+        .display {
+            font-size: 24px; /* Tamaño de la fuente en el área de visualización */
+            margin-top: 10px; /* Espacio superior del área de visualización */
+            padding: 10px; /* Espacio interno dentro del área de visualización */
+            border: 1px solid #ccc; /* Borde alrededor del área de visualización */
+            display: inline-block; /* Muestra el área de visualización como un bloque en línea */
+            width: 120px; /* Ancho del área de visualización */
+            text-align: center; /* Alineación del texto en el centro */
+        }
+    </style>
+</head>
+<body>
+    <!-- Botón para ingresar los números -->
+    <button onclick="ingresarNumero(1)">1</button>
+    <button onclick="ingresarNumero(2)">2</button>
+    <button onclick="ingresarNumero(3)">3</button>
+    <button onclick="ingresarNumero(4)">4</button>
+    <button onclick="ingresarNumero(5)">5</button>
+    <button onclick="ingresarNumero(6)">6</button>
+    <button onclick="ingresarNumero(7)">7</button>
+    <button onclick="ingresarNumero(8)">8</button>
+    <button onclick="ingresarNumero(9)">9</button>
+    <br>
+     <!-- Botón para realizar la suma de los números ingresados -->
+    <button onclick="sumar()">Sumar</button>
+    <!-- Área para mostrar el resultado -->
+    <div class="display" id="resultado">0</div>
+   
+    <script src="funtion.js"></script>
+    
+   </body>
+
+   </html>
