@@ -24,7 +24,7 @@
                 <label for="edad">Ingrese su edad:</label>
                 <input type="number" id="edad" class="form-control" required>
             </div>
-            <button type="button" class="btn btn-primary mt-3" onclick="">Verificar</button>
+            <button type="button" class="btn btn-primary mt-3" onclick="verificar()">Verificar</button>
         </form>
         <!-- Mensaje de resultado -->
         <div id="resultado" class="mt-3"></div>
@@ -37,6 +37,21 @@
     <!-- Enlace a Bootstrap y jQuery JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
  
-    
+    <script>
+       
+        function verificar(){
+        let edad = document.getElementById('edad').value;
+        let resultado = '';
+           resultado = (edad < 18)? '<div class="alert alert-danger" role="alert">NO Puedes conducir :)</div>':
+                (edad >=18 && edad <= 90)? '<div class="alert alert-success" role="alert"> puedes conducir :C</div>':
+                (edad >=90)? '<div class="alert alert-danger" role="alert">NO Puedes conducir :)</div>' : "no";
+          //(edad >= 18 && edad < 90)? "Puedes conducir :)" : "No puedes, saca licencia :C" ;
+          document.getElementById('resultado').innerHTML = resultado
+          console.log(edad);
+          }
+        
+          
+    </script>
+
 </body>
 </html>
